@@ -46,7 +46,7 @@ describe Spree::Api::Config do
   end
 end
 
-describe Spree::Dash::Config do
+describe Spree::Frontend::Config do
   before do
     @tenant1 = FactoryGirl.create(:tenant)
     @tenant2 = FactoryGirl.create(:tenant)
