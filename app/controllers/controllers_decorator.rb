@@ -34,10 +34,12 @@ SpreeMultiTenant.tenanted_controllers.each do |controller|
         path = "app/tenants/#{tenant.code}/views"
         prepend_view_path(path)
 
-        # Execute ActiveRecord queries within the scope of the tenant
+        #Execute ActiveRecord queries within the scope of the tenant
         SpreeMultiTenant.with_tenant tenant do
+          #Multitenant.current_tenant = tenant
           yield
         end
+
       end
 
   end

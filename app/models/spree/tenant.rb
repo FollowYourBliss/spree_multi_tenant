@@ -11,7 +11,7 @@ class Spree::Tenant < ActiveRecord::Base
   def domain_should_be_valid
     begin
       uri = URI.parse('http://'+domain)
-    rescue Execption => e
+    rescue Exception => e
       errors.add(:domain, 'This domain name is invalid')
     end
   end
